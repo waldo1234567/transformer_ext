@@ -156,7 +156,6 @@ if __name__ == "__main__":
     model = TransformerSeq2Seq(vocab_size=vocab, d_model=64, n_layers = 2, n_heads=4, d_ff = 256, max_len=64, pad_token_id=pad_id)
     model = model.to(device)
     
-    # toy batch: random ints (avoid pad id for simplicity)
     B, T_src, T_tgt = 4, 7, 6
     src = torch.randint(1, vocab, (B, T_src), device=device)
     tgt_input = torch.randint(1, vocab, (B, T_tgt), device=device)
@@ -171,7 +170,7 @@ if __name__ == "__main__":
         torch.cuda.synchronize()
     t0 = time.perf_counter()
 
-    logits = model(src, tgt_input)  # [B, T_tgt, V]
+    logits = model(src, tgt_input)  
     loss = F.cross_entropy(logits.view(-1, vocab), tgt_labels.view(-1))
     loss.backward()
     opt.step()

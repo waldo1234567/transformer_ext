@@ -10,6 +10,7 @@ dist/
 
 data
 
+main.ipynb
 # Extension / compiled
 *.so
 *.pyd
