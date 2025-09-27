@@ -18,8 +18,8 @@ main.ipynb
 *.obj
 *.o
 
-.profiler_logs/
-.tb_prof_ext/
+profiler_logs/
+tb_prof_ext/
 
 # Temp
 .vscode/
