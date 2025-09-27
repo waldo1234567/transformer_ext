@@ -1,0 +1,22 @@
+__pycache__
+# Python
+__pycache__/
+*.pyc
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+data
+
+# Extension / compiled
+*.so
+*.pyd
+*.dll
+*.obj
+*.o
+
+# Temp
+.vscode/
+.idea/
