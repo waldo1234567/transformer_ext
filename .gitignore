@@ -17,6 +17,9 @@ data
 *.obj
 *.o
 
+.profiler_logs/
+.tb_prof_ext/
+
 # Temp
 .vscode/
 .idea/
